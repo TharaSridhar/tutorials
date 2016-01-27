@@ -22,17 +22,16 @@ public class MoodService implements IMoodService {
 		moods = new ArrayList<String>();
 		moods.add("happy");
 		moods.add("sad");
-		moods.add("bubbly");
 		moods.add("frustrated");
 		moods.add("scared");
 		moods.add("excited");
 		
 		explanations = new ArrayList<String>();
 		explanations.add("I am hungry.");
-		explanations.add("there were no mice.");
-		explanations.add("there were mice.");
-		explanations.add("I am purring.");
-		explanations.add("life is not a pony farm.");
+		explanations.add("I won.");
+		explanations.add("I think I saw something.");
+		explanations.add("I am going out.");
+		explanations.add("I lost my bike.");
 		
 		random = new Random(); 
 	}
@@ -45,7 +44,7 @@ public class MoodService implements IMoodService {
 		return new Mood(moods.get(randomInt));
     }
 	
-	
+
 	public String getExplanation() {
 		int randomInt = random.nextInt(explanations.size());
 		return explanations.get(randomInt);
